@@ -17,6 +17,8 @@ html(lang='en')
         header.header
             div.content-wrap
                 block header
+                div.image-container
+                    img(src='/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
                 div.logo
                     h1
                         a(href=locals.url)= locals.name
@@ -28,6 +30,8 @@ html(lang='en')
                             a(href='/portfolio/') portfolio
                         li
                             a(href='/contact/') contact
+                        li
+                            a(href='/photography/') photography
         //script(src=contents.js['script.js'].url)
     div#content
         div.content-wrap

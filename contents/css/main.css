@@ -498,3 +498,14 @@ nav ul a:hover {
 nav ul a.active {
   color: #0066cc; /* Change to the color you want when active */
 }
+
+#photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.photo-grid-item img {
+  width: 100%;
+  height: auto;
+}

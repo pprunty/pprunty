@@ -2,7 +2,7 @@
 title: Welcome to My Blog
 author: the-wintersmith
 date: 2012-10-01 15:00
-template: article.pug
+template: basic.pug
 ---
 
 # Welcome to My Blog

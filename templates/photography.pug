@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+    h1= title
+    div#photo-grid
+        p Debug: #{JSON.stringify(images)}
+        if images
+            each imgPath in images
+                div.photo-grid-item
+                    img(src="/images/" + imgPath)

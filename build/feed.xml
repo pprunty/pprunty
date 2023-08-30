@@ -104,7 +104,7 @@ Because, believe it or not, a banana is not a friend.&lt;/p&gt;
 </description>
     </item>
     <item>
-      <title>Code and stuff!</title>
+      <title>💻 Code and stuff!</title>
       <link>http://localhost:8080/articles/another-test/</link>
       <pubDate>Mon, 01 Oct 2012 15:00:00 +0100</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/another-test/</guid>
@@ -772,7 +772,7 @@ _   underscore
 </description>
     </item>
     <item>
-      <title>Taketori Monogatari</title>
+      <title> 🏯 Taketori Monogatari</title>
       <link>http://localhost:8080/articles/bamboo-cutter/</link>
       <pubDate>Wed, 01 Feb 2012 00:00:00 +0000</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/bamboo-cutter/</guid>

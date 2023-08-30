@@ -1,5 +1,5 @@
 ---
-title: "Taketori Monogatari"
+title: " 🏯 Taketori Monogatari"
 author: Princess Kaguya
 date: 2012-02-01
 template: article.pug

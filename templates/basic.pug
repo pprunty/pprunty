@@ -1,35 +1,5 @@
-doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-        meta(name='viewport', content='width=device-width')
-        title= locals.name
-        link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
-        link(rel='stylesheet', href=contents.css['main.css'].url)
-    body
-        header.header
-            div.content-wrap
-                div.image-container
-                    img(src='/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
-                div.logo
-                    h1= locals.name
-                nav
-                    ul
-                        li
-                            a(href='/blog/') blog
-                        li
-                            a(href='/portfolio/') portfolio
-                        li
-                            a(href='/contact/') contact
-        div#content
-            div.content-wrap
-                block content
-        footer
-            div.content-wrap
-                block footer
-                    section.about
-                        !=contents['about.md'].html
-                    section.copy
-                        p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-                            a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+extends layout
+
+block content
+    basic.basic
+        section.content!= typogr(page.html).typogrify()
