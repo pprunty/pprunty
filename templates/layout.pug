@@ -18,20 +18,20 @@ html(lang='en')
             div.content-wrap
                 block header
                 div.image-container
-                    img(src='/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
+                    img(src=locals.url + 'images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
                 div.logo
                     h1
                         a(href=locals.url)= locals.name
                 nav
                     ul(id='navList')
                         li
-                            a(href='/blog/') blog
+                            a(href=locals.url + 'blog/') blog
                         li
-                            a(href='/portfolio/') portfolio
+                            a(href=locals.url + 'portfolio/') portfolio
                         li
-                            a(href='/photography/') photography
+                            a(href=locals.url + 'photography/') photography
                         li
-                            a(href='/contact/') contact
+                            a(href=locals.url + 'contact/') contact
 
         //script(src=contents.js['script.js'].url)
     div#content
