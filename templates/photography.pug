@@ -6,7 +6,7 @@ block content
         section.content!= typogr(page.html).typogrify()
     div.photo-grid
         div.photo-grid-item
-            img.loading(src=locals.url + '/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
+            img(src=(locals.url === 'http://localhost:8080' ? '/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG' : locals.url), alt='Description')
             //img(src=locals.url +'/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
             div.description 2023-01-01 Manhattan, New York City, United States
         div.photo-grid-item
@@ -34,7 +34,7 @@ block content
             img(src=locals.url +'/images/fjnfke.JPG', alt='Description')
             div.description 2023-01-01 Finnlough Spa & Retreat, Co. Fermanagh, Ireland
         div.photo-grid-item
-            img.loading(src=locals.url + '/images/images/IMG_1635.JPG', alt='Description')
+            img.loading(src=(locals.url === 'http://localhost:8080' ? '' : locals.url), alt='Description')
             //img(src=locals.url +'/images/IMG_1635.JPG', alt='Description')
             div.description 1997-08-25 Me doing a space walk the day after I was born, The Atmosphere, Earth
 
