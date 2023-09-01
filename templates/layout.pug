@@ -23,14 +23,14 @@ html(lang='en')
                     h1
                         a(href=locals.url)= locals.name
                 nav
-                    ul(id='navList')
-                        li
+                    ul
+                        li(class=(locals.page === 'blog' ? 'active' : ''))
                             a(href=locals.url + '/blog/') blog
-                        li
+                        li(class=(locals.page === 'portfolio' ? 'active' : ''))
                             a(href=locals.url + '/portfolio/') portfolio
-                        li
+                        li(class=(locals.page === 'photography' ? 'active' : ''))
                             a(href=locals.url + '/photography/') photography
-                        li
+                        li(class=(locals.page === 'contact' ? 'active' : ''))
                             a(href=locals.url + '/contact/') contact
 
         //script(src=contents.js['script.js'].url)

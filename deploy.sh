@@ -48,9 +48,17 @@ read -p "Would you like to deploy to GitHub Pages? (y/n): " -n 1 -r
 echo  # Move to a new line for better readability
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  # Switch to gh-pages branch and copy build/* contents
+  # Stash any changes in the current branch
+  git stash
+
+  # Switch to gh-pages branch
   git checkout gh-pages
-  cp -r build/* .
+
+  # Remove all files to prepare for new commit
+  git rm -rf *
+
+  # Copy build/* contents
+  cp -r ../build/* .
 
   # Add, commit, and push changes
   git add .
@@ -59,6 +67,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   # Switch back to original branch
   git checkout -
+
+  # Apply stashed changes
+  git stash apply
 
   echo "Deployed to GitHub Pages."
 else
