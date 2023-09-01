@@ -1,10 +1,10 @@
 {
   "locals": {
-    "url": "https://pprunty.github.io/pprunty",
+    "url": "http://localhost:8080",
     "name": "patrick prunty",
     "owner": "Patrick Prunty",
     "description": "Ramblings of an immor(t)al demigod",
-    "stylesheet": "https://pprunty.github.io/pprunty/css/main.css"
+    "stylesheet": "http://localhost:8080/css/main.css"
   },
   "plugins": [
     "./plugins/paginator.coffee"
