@@ -1,7 +1,6 @@
 {
   "locals": {
-    "url": "https://pprunty.github.io/pprunty",
-    "stylesheet": "https://pprunty.github.io/pprunty/css/main.css",
+    "url": "http://localhost:8080",
     "name": "patrick prunty",
     "owner": "Patrick Prunty",
     "description": "Ramblings of an immor(t)al demigod"
