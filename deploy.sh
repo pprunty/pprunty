@@ -1,4 +1,5 @@
 #!/bin/bash
+-x # Print commands and their arguments as they are executed
 
 env=$1
 
@@ -56,29 +57,15 @@ if [ "$env" == "prod" ]; then
       TARGET_BRANCH="gh-pages"
       DIRECTORY_TO_COPY="build/*"
 
-      # Stash any changes outside the build/ directory to keep the working directory clean
-      git stash --keep-index
-
-      # Add and commit changes in the build/ directory
-      git add -f $DIRECTORY_TO_COPY
-      git commit -m "Committing local changes in build/ directory"
-
-      # Checkout to the target branch
+      mkdir ~/tmp && cp -R $DIRECTORY_TO_COPY ~/tmp
       git checkout $TARGET_BRANCH
-
-      # Copy the contents from the specified directory to the current directory
-      cp -R $DIRECTORY_TO_COPY .
-
-      # Add, commit, and push the changes
+      rm -rf *
+      cp -rf ~/tmp/* .
       git add .
       git commit -m "Automated push from $SOURCE_BRANCH to $TARGET_BRANCH"
       git push origin $TARGET_BRANCH
-
-      # Switch back to the source branch
       git checkout $SOURCE_BRANCH
-
-      # Apply stashed changes, if any
-      git stash apply
+      rm -rf ~/tmp
 
       echo "Successfully pushed the contents from $SOURCE_BRANCH:$DIRECTORY_TO_COPY to $TARGET_BRANCH."
     echo "Deployed to GitHub Pages."
