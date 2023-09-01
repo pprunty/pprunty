@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>README - patrick prunty
     </title>
-    <link rel="alternate" href="https://pprunty.github.io/pprunty/feed.xml" type="application/rss+xml" title="Ramblings of an immor(t)al demigod">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Ramblings of an immor(t)al demigod">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="/css/main.css">
   </head>
@@ -16,16 +16,16 @@
         <h1>README</h1>
         <p class="author">Written by <span class="author"><a href="mailto:the@wintersmith.eu">The Wintersmith</a></span>
         </p>
-        <div class="image-container"><img src="https://pprunty.github.io/pprunty/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG" alt="Description"></div>
+        <div class="image-container"><img src="/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG" alt="Description"></div>
         <div class="logo">
-          <h1><a href="https://pprunty.github.io/pprunty">patrick prunty</a></h1>
+          <h1><a href="http://localhost:8080">patrick prunty</a></h1>
         </div>
         <nav>
-          <ul id="navList">
-            <li><a href="https://pprunty.github.io/pprunty/blog/">blog</a></li>
-            <li><a href="https://pprunty.github.io/pprunty/portfolio/">portfolio</a></li>
-            <li><a href="https://pprunty.github.io/pprunty/photography/">photography</a></li>
-            <li><a href="https://pprunty.github.io/pprunty/contact/">contact</a></li>
+          <ul>
+            <li><a href="/blog/">blog</a></li>
+            <li><a href="/portfolio/">portfolio</a></li>
+            <li><a href="/photography/">photography</a></li>
+            <li><a href="/contact/">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -99,37 +99,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       <!-- This is where you might define a content block to be overridden in other files-->
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var currentPath = window.location.pathname;
-        var navItems = document.querySelectorAll('#navList li a');
-    
-        navItems.forEach(function (item) {
-            if (item.getAttribute('href') === currentPath) {
-                item.parentElement.classList.add('active');
-            }
-        });
-    });
-  </script>
-  <button id="scrollToTop" title="Go to top" onclick="scrollToTopFunction()">Top</button>
-  <script>
-    // Function to scroll to top
-    function scrollToTopFunction() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-    
-    // Show button when scrolling down
-    window.addEventListener('scroll', function () {
-        var scrollPosition = window.scrollY;
-        var btn = document.getElementById('scrollToTop');
-    
-        if (scrollPosition > 350) {  // Adjust this value based on when you want to show the button
-            btn.style.display = 'block';
-        } else {
-            btn.style.display = 'none';
-        }
-    });
-  </script>
+  <button id="scrollToTop" title="Go to top">Top</button>
   <footer>
     <div class="content-wrap">
       <div class="nav"><a href="/">&laquo; Full blog</a></div>
