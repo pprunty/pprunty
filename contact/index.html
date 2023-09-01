@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>patrick prunty
+    </title>
+    <link rel="alternate" href="https://pprunty.github.io/pprunty/feed.xml" type="application/rss+xml" title="Ramblings of an immor(t)al demigod">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="content-wrap">
+        <div class="image-container"><img src="https://pprunty.github.io/pprunty/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG" alt="Description"></div>
+        <div class="logo">
+          <h1><a href="https://pprunty.github.io/pprunty">patrick prunty</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="https://pprunty.github.io/pprunty/blog/">blog</a></li>
+            <li><a href="https://pprunty.github.io/pprunty/portfolio/">portfolio</a></li>
+            <li><a href="https://pprunty.github.io/pprunty/photography/">photography</a></li>
+            <li><a href="https://pprunty.github.io/pprunty/contact/">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--script(src=contents.js['script.js'].url)-->
+  </body>
+  <div id="content">
+    <div class="content-wrap">
+      <basic class="basic">
+        <section class="content"><hr>
+<p>I’m active on GitHub and Twitter, but feel free to email me with any<span class="widont">&nbsp;</span>questions:</p>
+<ul>
+<li>🏃🏼 Strava: <a href="https://www.strava.com/athletes/72636452" target="_blank" rel="noopener noreferrer">Patrick<span class="widont">&nbsp;</span>Prunty</a></li>
+<li>📧 Email: <a href="mailto:pprunty@tcd.ie">pprunty@tcd.ie</a></li>
+<li>🐙 GitHub: <a href="https://github.com/pprunty" target="_blank" rel="noopener noreferrer">@pprunty</a></li>
+<li>📶 <span class="caps">RSS</span>: <a href="https://pprunty.github.io/portfolio/">https://pprunty.github.io/portfolio/</a></li>
+<li>📝 <span class="caps">CV</span>: available upon<span class="widont">&nbsp;</span>request.</li>
+</ul>
+<p>If you would like to contribute to any projects I am currently working on, or like to go for a coffee or run with me, 
+please get in<span class="widont">&nbsp;</span>touch!</p>
+</section>
+      </basic>
+      <!-- This is where you might define a content block to be overridden in other files-->
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var currentPath = window.location.pathname;
+        var navItems = document.querySelectorAll('#navList li a');
+    
+        navItems.forEach(function (item) {
+            if (item.getAttribute('href') === currentPath) {
+                item.parentElement.classList.add('active');
+            }
+        });
+    });
+  </script>
+  <button id="scrollToTop" title="Go to top" onclick="scrollToTopFunction()">Top</button>
+  <script>
+    // Function to scroll to top
+    function scrollToTopFunction() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    
+    // Show button when scrolling down
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY;
+        var btn = document.getElementById('scrollToTop');
+    
+        if (scrollPosition > 350) {  // Adjust this value based on when you want to show the button
+            btn.style.display = 'block';
+        } else {
+            btn.style.display = 'none';
+        }
+    });
+  </script>
+  <footer>
+    <div class="content-wrap">
+      <section class="about"><p>Footfalls echo in the memory</p>
+<p>Down the passage which we did not take</p>
+<p>Towards the door we never opened</p>
+<p>Into the rose-garden. </p>
+<p>My words echo</p>
+<p>Thus, in your mind.</p>
+<p>But to what purpose?</p>
+<p>Disturbing the dust on a bowl of rose-leaves</p>
+<p>I do not know.</p>
+<p>Other echoes inhabit the garden. </p>
+<p>Shall we follow?</p>
+<p>– Extract from Burnt Norton, by <em>T.S. Eliot</em></p>
+
+      </section>
+      <section class="copy">
+        <p>&copy; 2023 Patrick Prunty &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+    </div>
+  </footer>
+</html>
