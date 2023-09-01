@@ -522,7 +522,6 @@ nav ul a.active {
 }
 
 img.loading {
-  /*background-image: url('/path/to/placeholder.jpg');*/
   background-color: #3e999f;
   background-size: cover;
   background-repeat: no-repeat;
