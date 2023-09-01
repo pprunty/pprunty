@@ -74,4 +74,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "Deployed to GitHub Pages."
 else
   echo "Not deploying to GitHub Pages."
+  echo "Previewing wintersmith project locally."
+  wintersmith preview
 fi
