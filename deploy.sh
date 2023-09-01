@@ -60,7 +60,7 @@ if [ "$env" == "prod" ]; then
       git stash --keep-index
 
       # Add and commit changes in the build/ directory
-      git add $DIRECTORY_TO_COPY
+      git add -f $DIRECTORY_TO_COPY
       git commit -m "Committing local changes in build/ directory"
 
       # Checkout to the target branch
