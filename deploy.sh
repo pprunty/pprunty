@@ -1,5 +1,7 @@
 #!/bin/bash
 
+env=$1
+
 # Check if jq is installed, if not, install it
 if ! command -v jq &> /dev/null; then
   echo "jq is not installed. Installing..."
@@ -30,10 +32,10 @@ update_config() {
 # Check for number of arguments
 if [ "$#" -ne 1 ]; then
   echo "Usage: ./update_config.sh [prod|dev]"
+  exit 1
 else
   update_config $1
 fi
-
 
 # Run wintersmith build
 if wintersmith build; then
@@ -43,37 +45,40 @@ else
   exit 1
 fi
 
-# Ask user if they want to deploy to GitHub Pages
-read -p "Would you like to deploy to GitHub Pages? (y/n): " -n 1 -r
-echo  # Move to a new line for better readability
+if [ "$env" == "prod" ]; then
+  # Ask user if they want to deploy to GitHub Pages
+  read -p "Would you like to deploy to GitHub Pages? (y/n): " -n 1 -r
+  echo  # Move to a new line for better readability
 
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  # Stash any changes in the current branch
-  git stash
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    # Stash any changes in the current branch
+    git stash
 
-  # Switch to gh-pages branch
-  git checkout gh-pages
+    # Switch to gh-pages branch
+    git checkout gh-pages
 
-  # Remove all files to prepare for new commit
-  git rm -rf *
+    # Remove all files to prepare for new commit
+    git rm -rf *
 
-  # Copy build/* contents
-  cp -r ../build/* .
+    # Copy build/* contents
+    cp -r build/* .
 
-  # Add, commit, and push changes
-  git add .
-  git commit -m "Deploy to GitHub Pages"
-  git push origin gh-pages
+    # Add, commit, and push changes
+    git add .
+    git commit -m "Deploy to GitHub Pages"
+    git push origin gh-pages
 
-  # Switch back to original branch
-  git checkout -
+    # Switch back to original branch
+    git checkout -
 
-  # Apply stashed changes
-  git stash apply
+    # Apply stashed changes
+    git stash apply
 
-  echo "Deployed to GitHub Pages."
-else
-  echo "Not deploying to GitHub Pages."
+    echo "Deployed to GitHub Pages."
+  else
+    echo "Not deploying to GitHub Pages."
+  fi
+elif [ "$env" == "dev" ]; then
   echo "Previewing wintersmith project locally."
   wintersmith preview
 fi

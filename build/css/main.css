@@ -522,12 +522,11 @@ nav ul a.active {
 }
 
 .active {
-  color: #f1f1f1;
-  background-color: #4CAF50;
+  background-color: #ff8000;
 }
 
 #scrollToTop {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -545,3 +544,9 @@ nav ul a.active {
   background-color: #333;
 }
 
+
+@media (max-width: 769px) {
+  #scrollToTop {
+    right: 10px;
+  }
+}
