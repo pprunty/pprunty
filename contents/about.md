@@ -2,21 +2,29 @@
 view: none
 ---
 
-Wintersmith is made by [Johan Nordberg][1] and licensed under the [MIT-license][2].
+Footfalls echo in the memory
 
-This footer text can be edited in about.md
+Down the passage which we did not take
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+Towards the door we never opened
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur.
+Into the rose-garden. 
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.
+My words echo
 
+Thus, in your mind.
+
+But to what purpose?
+
+Disturbing the dust on a bowl of rose-leaves
+
+I do not know.
+
+Other echoes inhabit the garden. 
+
+Shall we follow?
+
+-- Extract from Burnt Norton, by _T.S. Eliot_
 
 [1]: http://johan-nordberg.com
 [2]: http://opensource.org/licenses/MIT

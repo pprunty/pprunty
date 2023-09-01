@@ -23,29 +23,49 @@ html(lang='en')
                     h1
                         a(href=locals.url)= locals.name
                 nav
-                    ul
+                    ul(id='navList')
                         li
                             a(href='/blog/') blog
                         li
                             a(href='/portfolio/') portfolio
                         li
-                            a(href='/contact/') contact
-                        li
                             a(href='/photography/') photography
+                        li
+                            a(href='/contact/') contact
+
         //script(src=contents.js['script.js'].url)
     div#content
         div.content-wrap
             block content  // This is where you might define a content block to be overridden in other files
-                //div#blog-section.hidden
-                //    h2 Blog Section
-                //    p This is the blog content.
-                //div#portfolio-section.hidden
-                //    h2 Portfolio Section
-                //    p This is the portfolio content.
-                //div#contact-section.hidden
-                //    h2 Contact Section
-                //    p This is the contact content.
+    script.
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname;
+            var navItems = document.querySelectorAll('#navList li a');
 
+            navItems.forEach(function (item) {
+                if (item.getAttribute('href') === currentPath) {
+                    item.parentElement.classList.add('active');
+                }
+            });
+        });
+    button#scrollToTop(title='Go to top' onclick='scrollToTopFunction()') Top
+    script.
+        // Function to scroll to top
+        function scrollToTopFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Show button when scrolling down
+        window.addEventListener('scroll', function () {
+            var scrollPosition = window.scrollY;
+            var btn = document.getElementById('scrollToTop');
+
+            if (scrollPosition > 350) {  // Adjust this value based on when you want to show the button
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
     footer
         div.content-wrap
             block footer

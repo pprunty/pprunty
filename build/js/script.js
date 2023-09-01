@@ -1,36 +1,30 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const blogLink = document.querySelector("a[href='/blog']");
-//     const portfolioLink = document.querySelector("a[href='/portfolio']");
-//     const contactLink = document.querySelector("a[href='/contact']");
-//
-//     const blogSection = document.getElementById("blog-section");
-//     const portfolioSection = document.getElementById("portfolio-section");
-//     const contactSection = document.getElementById("contact-section");
-//
-//     function hideAllSections() {
-//         blogSection.classList.add("hidden");
-//         portfolioSection.classList.add("hidden");
-//         contactSection.classList.add("hidden");
-//     }
-//
-//     blogLink.addEventListener("click", function(event) {
-//         event.preventDefault();
-//         hideAllSections();
-//         blogSection.classList.remove("hidden");
-//     });
-//
-//     portfolioLink.addEventListener("click", function(event) {
-//         event.preventDefault();
-//         hideAllSections();
-//         portfolioSection.classList.remove("hidden");
-//     });
-//
-//     contactLink.addEventListener("click", function(event) {
-//         event.preventDefault();
-//         hideAllSections();
-//         contactSection.classList.remove("hidden");
-//     });
-// });
+// Get the button element
+var myButton = document.getElementById("scrollToTop");
+
+// Show the button when user scrolls down 20px from the top
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+        document.body.style.backgroundColor = "red"; // Debugging line
+
+    } else {
+        myButton.style.display = "none";
+    }
+}
+
+// Scroll to top when button is clicked
+myButton.addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+myButton.addEventListener('click', function() {
+    console.log("Button clicked!"); // Debugging line
+    document.body.style.backgroundColor = "red"; // Debugging line
+});
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -56,11 +50,23 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const links = document.querySelectorAll('nav ul li a');
+//     links.forEach((link) => {
+//         if (link.href === window.location.href) {
+//             link.classList.add('active');
+//         }
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach((link) => {
-        if (link.href === window.location.href) {
-            link.classList.add('active');
+    const anchors = document.querySelectorAll('a');
+
+    anchors.forEach(anchor => {
+        if (anchor.host !== window.location.host) {
+            anchor.setAttribute('target', '_blank');
+            // To improve security when using target="_blank"
+            anchor.setAttribute('rel', 'noopener noreferrer');
         }
     });
 });
