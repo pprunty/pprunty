@@ -540,7 +540,7 @@ img.loading {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #555;
+  background-color: #e01919;
   opacity: 85%;
   color: white;
   cursor: pointer;
