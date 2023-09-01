@@ -24,9 +24,6 @@ myButton.addEventListener('click', function() {
     document.body.style.backgroundColor = "red"; // Debugging line
 });
 
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll("nav ul li a");
 
@@ -50,14 +47,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const links = document.querySelectorAll('nav ul li a');
-//     links.forEach((link) => {
-//         if (link.href === window.location.href) {
-//             link.classList.add('active');
-//         }
-//     });
-// });
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('nav ul li a');
+    links.forEach((link) => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const anchors = document.querySelectorAll('a');
@@ -68,5 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
             // To improve security when using target="_blank"
             anchor.setAttribute('rel', 'noopener noreferrer');
         }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.loading');
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.classList.remove('loading');
+        });
     });
 });

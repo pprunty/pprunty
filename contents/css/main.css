@@ -521,6 +521,13 @@ nav ul a.active {
   font-family: Monospaced, monospace;
 }
 
+img.loading {
+  /*background-image: url('/path/to/placeholder.jpg');*/
+  background-color: #3e999f;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .active {
   background-color: #ff8000;
 }
@@ -529,24 +536,34 @@ nav ul a.active {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  height: 40px;
+  width: 40px;
   z-index: 99;
   border: none;
   outline: none;
   background-color: #555;
+  opacity: 85%;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 5px;
+  border-radius: 100%;
 }
 
 #scrollToTop:hover {
   background-color: #333;
 }
 
+@media (min-width: 769px) {
+  #scrollToTop {
+    width: 50px;
+    height: 50px;
+    right: 30px;
+  }
+}
+
 
 @media (max-width: 769px) {
   #scrollToTop {
-    right: 10px;
+    right: 5px;
   }
 }
