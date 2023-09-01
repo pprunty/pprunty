@@ -51,29 +51,36 @@ if [ "$env" == "prod" ]; then
   echo  # Move to a new line for better readability
 
   if [[ $REPLY =~ ^[Yy]$ ]]; then
-    # Stash any changes in the current branch
-    git stash
+      # Define the branch and directory variables
+      SOURCE_BRANCH="main"
+      TARGET_BRANCH="gh-pages"
+      DIRECTORY_TO_COPY="build/*"
 
-    # Switch to gh-pages branch
-    git checkout gh-pages
+      # Stash any changes outside the build/ directory to keep the working directory clean
+      git stash --keep-index
 
-    # Remove all files to prepare for new commit
-    git rm -rf *
+      # Add and commit changes in the build/ directory
+      git add $DIRECTORY_TO_COPY
+      git commit -m "Committing local changes in build/ directory"
 
-    # Copy build/* contents
-    cp -r build/* .
+      # Checkout to the target branch
+      git checkout $TARGET_BRANCH
 
-    # Add, commit, and push changes
-    git add .
-    git commit -m "Deploy to GitHub Pages"
-    git push origin gh-pages
+      # Copy the contents from the specified directory to the current directory
+      cp -R $DIRECTORY_TO_COPY .
 
-    # Switch back to original branch
-    git checkout -
+      # Add, commit, and push the changes
+      git add .
+      git commit -m "Automated push from $SOURCE_BRANCH to $TARGET_BRANCH"
+      git push origin $TARGET_BRANCH
 
-    # Apply stashed changes
-    git stash apply
+      # Switch back to the source branch
+      git checkout $SOURCE_BRANCH
 
+      # Apply stashed changes, if any
+      git stash apply
+
+      echo "Successfully pushed the contents from $SOURCE_BRANCH:$DIRECTORY_TO_COPY to $TARGET_BRANCH."
     echo "Deployed to GitHub Pages."
   else
     echo "Not deploying to GitHub Pages."
