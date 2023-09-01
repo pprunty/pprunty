@@ -1,0 +1,27 @@
+{
+  "locals": {
+    "url": "https://pprunty.github.io/pprunty",
+    "name": "patrick prunty",
+    "owner": "Patrick Prunty",
+    "description": "Ramblings of an immor(t)al demigod",
+    "stylesheet": "https://pprunty.github.io/pprunty/css/main.css"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "pug": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}
