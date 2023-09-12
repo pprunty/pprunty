@@ -55,27 +55,34 @@ if [ "$env" == "prod" ]; then
       # Define the branch and directory variables
       SOURCE_BRANCH="main"
       TARGET_BRANCH="gh-pages"
-      DIRECTORY_TO_COPY="build/*"
+      DIRECTORY_TO_COPY="build"
+      REPO_NAME="pprunty"
+      GIT_URL="https://github.com/pprunty/pprunty.git"
 
-      git stash
+      mv $DIRECTORY_TO_COPY $REPO_NAME
+      cd $REPO_NAME
 
-      mkdir ~/tmp && cp -R $DIRECTORY_TO_COPY ~/tmp
-      sleep 10
-      git checkout $TARGET_BRANCH
-      sleep 10
-      rm -rf *
-      sleep 10
-      find . -maxdepth 1 ! -name '.*' -exec rm -rf {} +
+      # Step 4: Check if the directory is already a Git repository
+      if [ ! -d ".git" ]; then
+          # Initialize Git repository if not already initialized
+          git init
+          git remote add origin $GIT_URL
+      else
+          # Fetch the latest changes from the remote repository
+          git fetch
+      fi
+
+      # Step 5: Checkout or create a new branch called 'gh-pages'
+      git checkout gh-pages --force || git checkout -b gh-pages
+
+      # Step 6: Add all files and commit the changes
       git add .
-      sleep 10
-      git commit -m "Automated push from $SOURCE_BRANCH to $TARGET_BRANCH"
-      sleep 10
-      git push origin $TARGET_BRANCH
-      sleep 10
-      git checkout $SOURCE_BRANCH
-      sleep 10
-      rm -rf ~/tmp
-      git stash apply
+      git commit -m "Deploying to GitHub Pages"
+
+      # Step 7: Push the changes to GitHub
+      git push origin gh-pages --force
+
+#      cd .. && rm -r pprunty
 
       echo "Successfully pushed the contents from $SOURCE_BRANCH:$DIRECTORY_TO_COPY to $TARGET_BRANCH."
     echo "Deployed to GitHub Pages."

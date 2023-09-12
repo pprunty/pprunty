@@ -96,6 +96,7 @@ hr {
 
 .header a, .header a:hover {
   text-decoration: none;
+  margin-bottom: 30px;
   /*color: #171717;*/
   color: #635650; /* Change to your desired color */
 }
@@ -108,10 +109,42 @@ hr {
   margin-right: auto;
 }
 
+.image-container-small {
+  display: flex;
+}
+
+.image-container-small img {
+  margin-top: 1em;
+  justify-content: center;
+  margin-bottom: .5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  animation: logoScale 1.1s ease-in-out;
+}
+
+@keyframes logoScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  85% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .image-container img {
   /*position: center;*/
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 100px;
   object-fit: cover;
 }
@@ -418,7 +451,8 @@ code.lang-markdown .bullet {
     margin: 1em 0;
   }
   .header h1 {
-    font-size: 1.4em;
+    margin-top: 10px;
+    font-size: 2em;
     margin-bottom: 0.6em;
   }
   .header .description {
@@ -459,6 +493,7 @@ code.lang-markdown .bullet {
 
 nav {
   font-size: 17px;
+  margin-bottom: 30px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -527,42 +562,136 @@ img.loading {
   background-repeat: no-repeat;
 }
 
-.active {
-  background-color: #ff8000;
+/* Add this to your main.css */
+.header a.active {
+  color: #FF612B; /* your active color */
 }
 
 #scrollToTop {
   display: none;
   position: fixed;
-  bottom: 20px;
-  height: 40px;
-  width: 40px;
+  bottom: 15px;
+  height: 50px;
+  width: 50px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #e51111;
-  opacity: 85%;
+  background-color: #635650;
+  opacity: 80%;
   color: white;
   cursor: pointer;
   padding: 5px;
   border-radius: 100%;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 #scrollToTop:hover {
-  background-color: #333;
+  background-color: #3f3633;
 }
 
 @media (min-width: 769px) {
   #scrollToTop {
-    width: 50px;
-    height: 50px;
-    right: 30px;
+    width: 60px;
+    height: 60px;
+    right: 60px;
+    bottom: 25px;
   }
 }
 
 
 @media (max-width: 769px) {
   #scrollToTop {
-    right: 5px;
+    right: 10px;
+  }
+}
+
+.nav-back {
+  margin-bottom: 60px;
+}
+
+.drop-cap {
+  font-size: 78px;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+.app-store-badge-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;  /* This will vertically align the badges to the center */
+}
+
+.app-store-badge {
+  overflow: hidden;
+}
+
+.google-play-badge img {
+  width: 160px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.apple-store-badge img {
+  width: 140px;
+  height: auto;
+  overflow: hidden;
+}
+
+.youtube-container {
+  display: flex;
+}
+
+.youtube-video {
+  justify-content: center;
+}
+
+.url-preview {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  /*padding: 10px;*/
+  /*margin: 10px 0;*/
+  border-radius: 10px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.url-preview-title {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+@media (max-width: 769px) {
+  .url-preview-title {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+  }
+}
+
+.url-preview-description {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.url-preview-img {
+  width: 160px !important;
+  height: 160px !important;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 769px) {
+  .url-preview-img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 10px;
+    padding: 5px;
   }
 }

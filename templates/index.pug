@@ -1,6 +1,9 @@
 
 extends layout
 
+block append head
+  link(rel='icon', href=locals.url + '/assets/images/favicon.ico', type='image/x-icon')
+
 block content
   include author
   each article in articles
@@ -9,19 +12,19 @@ block content
         p.date
           span= moment.utc(article.date).format('DD. MMMM YYYY')
         h2
-          a(href=article.url)= article.title
+          a(href=locals.url + article.url)!= article.title + ' &raquo;'
       section.content
         if article.intro.length > 0
           != typogr(article.intro).typogrify()
         if article.hasMore
           p.more
-            a(href=article.url) more
+            a(href=locals.url + article.url) more
 
 block prepend footer
   div.nav
     if prevPage
-      a(href=prevPage.url) &laquo; Newer
+      a(href=locals.url + prevPage.url) &laquo; Newer
     else
-      a(href='/archive.html') &laquo; Archives
+      a(href=locals.url + '/archive.html') &laquo; Archives
     if nextPage
-      a(href=nextPage.url) Next page &raquo;
+      a(href=locals.url + nextPage.url) Next page &raquo;

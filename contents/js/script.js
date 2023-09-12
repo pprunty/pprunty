@@ -1,78 +1,39 @@
-// Get the button element
-var myButton = document.getElementById("scrollToTop");
+document.addEventListener("DOMContentLoaded", function () {
+    const articleContent = document.querySelector('.content');
+    const regex = /(https?:\/\/[^\s]+)/g;
 
-// Show the button when user scrolls down 20px from the top
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        myButton.style.display = "block";
-        document.body.style.backgroundColor = "red"; // Debugging line
-
-    } else {
-        myButton.style.display = "none";
+    // Find URLs in the article content
+    let match;
+    const urls = [];
+    while ((match = regex.exec(articleContent.innerHTML)) !== null) {
+        urls.push(match[0]);
     }
-}
 
-// Scroll to top when button is clicked
-myButton.addEventListener('click', function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-});
+    // Fetch and display URL previews
+    urls.forEach(async (url) => {
+        try {
+            const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
+            const data = await response.json();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data.contents, 'text/html');
+            const title = doc.querySelector('head title').innerText;
+            const description = doc.querySelector('meta[name="description"]').getAttribute('content').substring(0, 150);
+            const image = doc.querySelector('meta[property="og:image"]').getAttribute('content');
 
-myButton.addEventListener('click', function() {
-    console.log("Button clicked!"); // Debugging line
-    document.body.style.backgroundColor = "red"; // Debugging line
-});
+            const previewHTML = `
+        <div class="url-preview">
+          <img class="url-preview-img" src="${image}" alt="${title}" />
+              <div class="url-preview-details">
+              <div class="url-preview-title">${title}</div>
+              <div class="url-preview-description">${description}</div>
+          </div>
+        </div>
+      `;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("nav ul li a");
-
-    links.forEach(link => {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            // Load content via AJAX and update your main content area
-            const url = this.getAttribute('href');
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Extract the part you want to update
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, "text/html");
-                    const newContent = doc.querySelector("div#content").innerHTML;
-
-                    // Update the content
-                    document.querySelector("div#content").innerHTML = newContent;
-                });
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach((link) => {
-        if (link.href === window.location.href) {
-            link.classList.add('active');
+            // Insert the preview HTML next to the URL
+            articleContent.innerHTML = articleContent.innerHTML.replace(url, `${url} ${previewHTML}`);
+        } catch (error) {
+            console.error('Failed to fetch preview', error);
         }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const anchors = document.querySelectorAll('a');
-
-    anchors.forEach(anchor => {
-        if (anchor.host !== window.location.host) {
-            anchor.setAttribute('target', '_blank');
-            // To improve security when using target="_blank"
-            anchor.setAttribute('rel', 'noopener noreferrer');
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.loading');
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.classList.remove('loading');
-        });
     });
 });

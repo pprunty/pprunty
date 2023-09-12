@@ -24,7 +24,7 @@ Other echoes inhabit the garden.
 
 Shall we follow?
 
--- Extract from Burnt Norton, by _T.S. Eliot_
+-- Extract from _Burnt Norton,_ by T.S. Eliot
 
 [1]: http://johan-nordberg.com
 [2]: http://opensource.org/licenses/MIT

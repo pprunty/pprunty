@@ -13,42 +13,58 @@ html(lang='en')
             link(rel='alternate', href=locals.url + '/feed.xml', type='application/rss+xml', title=locals.description)
             link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
             link(rel='stylesheet', href=locals.stylesheet)
+            link(rel='icon', href=locals.url + '/assets/images/favicon.ico', type='image/x-icon')
+
+            // Basic Meta Tags
+            meta(name='description', content="Software projects, blog posts and photography.")
+            meta(name='author', content='Patrick Prunty')
+            meta(name='keywords', content='Patrick Prunty, Portfolio, Software Developer, Python, C++, Data Engineering, AI, Machine Learning, iOS, Creative Writing, Photography')
+
+            // Open Graph Meta Tags
+            meta(property='og:title', content="Patrick Prunty's Portfolio")
+            meta(property='og:description', content="Software projects, blog posts and photography.")
+            meta(property='og:image', content=locals.url + '/assets/images/thumbnail.JPG')
+            meta(property='og:url', content=locals.url)
+
+            // Twitter Card Meta Tags
+            meta(name='twitter:card', content='summary')
+            meta(name='twitter:title', content="Patrick Prunty's Portfolio")
+            meta(name='twitter:description', content="Software projects, blog posts and photography.")
+            meta(name='twitter:image', content=locals.url + '/assets/images/thumbnail.JPG')
+
+            // Google Analytics
+            script(async src="https://www.googletagmanager.com/gtag/js?id=G-08HZ6HBLML")
+            script.
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-08HZ6HBLM');
     body(class=bodyclass)
         header.header
             div.content-wrap
                 block header
-                div.image-container
-                    img(src=locals.url + '/images/e5c3a4f2-ea12-4fb5-bd9d-611df3b51c16.JPG', alt='Description')
-                div.logo
-                    h1
-                        a(href=locals.url)= locals.name
-                nav
-                    ul(id='navList')
-                        li
-                            a(href=locals.url + '/blog/') blog
-                        li
-                            a(href=locals.url + '/portfolio/') portfolio
-                        li
-                            a(href=locals.url + '/photography/') photography
-                        li
-                            a(href=locals.url + '/contact/') contact
-
-        //script(src=contents.js['script.js'].url)
+                if !hideHeader
+                    div.image-container
+                        img(src=locals.url + '/assets/images/9fe51fdc-666f-471e-a0aa-12fb27d8d5eb.JPG', alt='Description')
+                    div.logo
+                        h1
+                            a(href=locals.url)= locals.name
+                    nav
+                        ul(id='navList')
+                            li
+                                a(href=locals.url + '/', class='nav-item') blog
+                            li
+                                a(href=locals.url + '/portfolio/', class='nav-item') portfolio
+                            li
+                                a(href=locals.url + '/photography/', class='nav-item') photography
+                            li
+                                a(href=locals.url + '/contact/', class='nav-item') contact
     div#content
         div.content-wrap
             block content  // This is where you might define a content block to be overridden in other files
-    script.
-        document.addEventListener('DOMContentLoaded', function () {
-            var currentPath = window.location.pathname;
-            var navItems = document.querySelectorAll('#navList li a');
-
-            navItems.forEach(function (item) {
-                if (item.getAttribute('href') === currentPath) {
-                    item.parentElement.classList.add('active');
-                }
-            });
-        });
-    button#scrollToTop(title='Go to top' onclick='scrollToTopFunction()') Top
+    button#scrollToTop(title='Go to top' onclick='scrollToTopFunction()')
+        svg(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke='white', width='32', height='32')
+            path(stroke-linecap='round', stroke-linejoin='round', d='M4.5 15.75l7.5-7.5 7.5 7.5', stroke-width='1.5')
     script.
         // Function to scroll to top
         function scrollToTopFunction() {
@@ -66,6 +82,25 @@ html(lang='en')
                 btn.style.display = 'none';
             }
         });
+    script.
+        // Function to set active nav link based on current URL
+        function setActiveNavLink() {
+            const currentURL = window.location.href;
+            const navItems = document.querySelectorAll('.nav-item');
+
+            navItems.forEach((item) => {
+                const itemHref = item.getAttribute('href');
+                if (currentURL === itemHref || (currentURL + '/' === itemHref)) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        // Call the function to set the active nav link
+        setActiveNavLink();
+    script(src=locals.url + "/assets/pdfs/thesis.pdf", data-pdfjs-src=locals.url + "/js/pdfThumbnails.js")
     footer
         div.content-wrap
             block footer
