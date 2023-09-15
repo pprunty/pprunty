@@ -14,6 +14,7 @@ I’m active on GitHub and Twitter, but feel free to email me with any questions
 - 📶 RSS: [https://pprunty.github.io/portfolio/](https://pprunty.github.io/portfolio/)
 - 🧑🏼‍💻 LinkedIn: <a href="https://www.linkedin.com/in/patrickprunty/" target="_blank" rel="noopener noreferrer">Patrick Prunty</a>
 - ✍🏻 Medium: <a href="https://medium.com/@pprunty" target="_blank" rel="noopener noreferrer">@pprunty</a>
+- 🏷️ Substack: <a href="https://substack.com/@patrickprunty" target="_blank" rel="noopener noreferrer">@patrickprunty</a>
 - 📝 CV: available upon request.
 
 If you would like to contribute to any projects I am currently working on, or join me for a coffee or run, 

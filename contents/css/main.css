@@ -120,8 +120,8 @@ hr {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   object-fit: cover;
   animation: logoScale 1.1s ease-in-out;
 }
@@ -131,10 +131,10 @@ hr {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.6);
   }
-  85% {
-    transform: scale(0.8);
+  80% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -640,12 +640,22 @@ img.loading {
   overflow: hidden;
 }
 
-.youtube-container {
+.youtube-container  {
   display: flex;
 }
 
+
 .youtube-video {
   justify-content: center;
+  width: 100%;
+  height: 440px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 769px) {
+  .youtube-video {
+    height: 300px;
+  }
 }
 
 .url-preview {

@@ -9,21 +9,28 @@ _Poem by Patrick Prunty_
 
 --- 
 
-Wherein We Lay
-A crocodile balloon in the heat forced us still.
-We lay there, breathing
-Dusk unto Dawn
-Together - unable to move.
-Afraid to break this altogether silence
-Like two become one,
-Like this love is fun,
-Like dawn would never come.
-In time, you are there with me still - unmoving
-I wished then that tomorrow would never come.
-But tomorrow becomes today
-and -
-today
-becomes tomorrow
-And were I with you still I would forget this - moving:
-And together we could be each other's undoing
-But then build ourselves up, and up.
+<p>Wherein we lay</p>
+
+<p>A crocodile balloon in the heat forced us still</p>
+<p>We lay there, breathing</p>
+<p>Dusk unto dawn,</p>
+<p>Together - unable to move</p>
+
+
+<p>Afraid to break this altogether silence,</p>
+<p>Like two become one,</p>
+<p>Like this love is fun,</p>
+<p>Like dawn would never come.</p>
+
+
+<p>In time, you are there with me still - unmoving,</p>
+<p>I wished then that tomorrow would never come.</p>
+<p>But tomorrow becomes today,</p>
+<p>and -</p>
+<p>today becomes tomorrow.</p>
+
+<p>And were I with you still, I would forget this - moving:</p>
+<p>And together we could be each other's undoing,</p>
+<p>But then build ourselves up, and up.</p>
+
+

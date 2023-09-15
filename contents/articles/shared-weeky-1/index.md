@@ -15,6 +15,7 @@ A list of consumed content which I would like to share with you this week...
 4. <a href="https://open.spotify.com/track/2Lmpxi7j95HOvsR6zj1Fl3?si=f280c5629f0a40e2" target="_blank" rel="noopener noreferrer">Founders: Ed Catmull (Pixar) - Podcast/Spotify</a>
 5. <a href="https://www.youtube.com/watch?v=3gNph25gxhw&t=757s" target="_blank" rel="noopener noreferrer">DIRT Episode 4 — NYC | Huckberry Presents - Video/Youtube</a>
 6. <a href="https://www.youtube.com/watch?v=FbOGEZIfPF0" target="_blank" rel="noopener noreferrer">Hiking Half Dome with Henry Golding - Video/Youtube</a>
+7. <a href="https://www.youtube.com/watch?v=Oe8lU18G89Q" target="_blank" rel="noopener noreferrer">Subliminal Official GAMEPLAY Trailer (Part 1) - Video/Youtube</a>
+8. <a href="https://www.youtube.com/watch?v=MZCltCw1qqE" target="_blank" rel="noopener noreferrer">Blackfyre Rebellions: House Targaryen’s greatest enemies - Video/Youtube</a>
 
-
-Subscribe to my sub-stack newsletter to get email notifications when I release my shared weekly 🙂
+Subscribe to my <a href="https://patrickprunty.substack.com?utm_source=navbar&utm_medium=web&r=1mwzzd " target="_blank" rel="noopener noreferrer">sub-stack newsletter</a> to get email notifications when I release my shared weekly 🙂
