@@ -642,11 +642,11 @@ img.loading {
 
 .youtube-container  {
   display: flex;
+  width: 100%;
 }
 
 
 .youtube-video {
-  justify-content: center;
   width: 100%;
   height: 440px;
   margin-bottom: 50px;

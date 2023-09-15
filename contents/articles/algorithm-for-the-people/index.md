@@ -6,7 +6,7 @@ template: article.pug
 ---
 
 A novel approach to user content recommendation systems which opens a two-way communication channel (web-socket) between the user and
-recommendation algorithm via a content filter configuration system
+recommendation algorithm via a content filter configuration system on the frontend
 
 ---
 
