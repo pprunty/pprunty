@@ -1,12 +1,12 @@
 ---
-title: Readers' strike
+title: 🪧 Readers' strike
 author: John Joyce
 date: 2023-09-04
 template: article.pug
 ---
 
 Exploring how readers can leverage large language models (LLMs) to create fan-fiction for long awaited titles such as George
-R.R Martin's _The Winds of Winter_ (fifth book in the series _A Song of Ice and Fire_ / _Game of Thrones_ )
+R.R Martin's _The Winds of Winter_ (forthcoming sixth novel in the series _A Song of Ice and Fire_ / _Game of Thrones_ )
 
 ---
 

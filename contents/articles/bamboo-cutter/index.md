@@ -4,7 +4,10 @@ author: Princess Kaguya
 date: 2012-02-01
 template: article.pug
 ---
-![sauron](https://pprunty.github.io/pprunty/assets/images/sauron.JPG)
+
+example title
+
+---
 
 <div class="drop-cap">L</div>ong, long ago, there lived an old bamboo wood-cutter.
 
@@ -12,7 +15,12 @@ He was very poor and sad also, for no child had Heaven sent to cheer his old age
 
 <span class="more"></span>
 
-![Taketori Monogatari](bamboo-cutterri.jpg)
+<div class="article-image-container">
+  <div class="article-image">
+    <img src="https://pprunty.github.io/pprunty/assets/images/sauron.JPG" alt="sauron">
+  </div>
+  <div class="article-image-title">Pokemon something</div>
+</div>
 
 One morning as usual he had gone out to his work, and having found a nice clump of bamboos, had set to work to cut some of them down. Suddenly the green grove of bamboos was flooded with a bright soft light, as if the full moon had risen over the spot. Looking round in astonishment, he saw that the brilliance was streaming from one bamboo. The old man. full of wonder. dropped his ax and went towards the light. On nearer approach he saw that this soft splendor came from a hollow in the green bamboo stem, and still more wonderful to behold, in the midst of the brilliance stood a tiny human being, only three inches in height, and exquisitely beautiful in appearance.
 

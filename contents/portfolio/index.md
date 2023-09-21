@@ -26,7 +26,7 @@ it allows real-time manipulation of web components on your local server via shap
 a library of templates to build your project from, and modular components which can be plugged in to your project, for 
 quick, standardized and interactive development.
 
-version 0.1.0 video demo is coming soon. In the meantime enjoy this cool video instead: 
+🔜 Version 0.1.0 video demo is coming soon. In the meantime enjoy this cool video instead: 
 
 <div class="youtube-container">
   <iframe class="youtube-video" src="https://www.youtube.com/embed/FFCXHr8aKDk?si=OwNZwSGVecTeBByv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

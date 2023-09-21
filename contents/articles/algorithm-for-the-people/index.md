@@ -1,12 +1,12 @@
 ---
-title: An algorithm for the people, controlled by the people (part 1)
+title: 🖥️ An algorithm for the people, controlled by the people (part 1)
 author: Patrick Prunty
 date: 2023-09-03
 template: article.pug
 ---
 
 A novel approach to user content recommendation systems which opens a two-way communication channel (web-socket) between the user and
-recommendation algorithm via a content filter configuration system on the frontend
+recommendation algorithm, via a content filter configuration system on the frontend
 
 ---
 
@@ -45,3 +45,64 @@ ORGANIC
 
 ... how it can help TikTok (advertisements become targeted and more appropriate - likely to consider an add which advertises
 football boots when i set the content configuration label "Football" above, say, 70%)
+
+
+```python
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from pydantic import BaseModel, ValidationError
+import json
+
+app = FastAPI()
+
+# Combine handlers and models into a single dictionary (key: request_type, value: (model, handler))
+EVENT_HANDLERS = {
+    "LATENT_TRACKED_ENGAGEMENT_EVENT": (UserTrackedEngagementRequest, handle_user_engagement_tracker),
+    "LATENT_TRACKED_GEO_EVENT": (UserTrackedGeoRequest, handle_user_geo_tracker),
+    "EXPLICIT_FILTER_CONFIGURATION": (UserFilterConfigurationRequest, handle_filter_configuration),
+    "EXPLICIT_RATING_EVENT": (UserItemRatingRequest, handle_user_rating),
+    "EXPLICIT_FEEDBACK_EVENT": (UserItemFeedbackRequest, handle_user_feedback),
+    "NEW_RECOMMENDATIONS": (UserRecommendationRequest, handle_user_recommendation)
+}
+
+
+async def handle_request(websocket: WebSocket):
+    try:
+        data = await websocket.receive_text()
+        message = json.loads(data)
+        request_type = message["type"]
+        handler_model, _ = EVENT_HANDLERS.get(request_type, (None, None))
+
+        if handler_model:
+            request_object = handler_model(**message["data"])
+            return request_type, request_object
+    except json.JSONDecodeError:
+        await websocket.send_text("Error: Invalid JSON format")
+        return None, None
+    except ValidationError as e:
+        await websocket.send_text(f"Error: {str(e)}")
+        return None, None
+    except WebSocketDisconnect:
+        pass
+    return None, None
+
+
+async def dispatch_request(websocket: WebSocket, request_type, request_object):
+    _, handler = EVENT_HANDLERS.get(request_type, (None, None))
+    if handler:
+        await handler(websocket=websocket, request=request_object)
+    else:
+        await websocket.send_text("Error: Invalid request type")
+
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            request_type, request_object = await handle_request(websocket)
+            if request_type:
+                await dispatch_request(websocket, request_type, request_object)
+    except WebSocketDisconnect:
+        # Handle client disconnection here, e.g., by logging or cleaning up resources
+        print("Client disconnected")
+```

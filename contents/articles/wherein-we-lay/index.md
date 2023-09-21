@@ -1,11 +1,11 @@
 ---
-title: Wherein We Lay
+title: 📜 Wherein We Lay
 author: Patrick Prunty
 date: 2021-09-05
 template: article.pug
 ---
 
-_Poem by Patrick Prunty_
+Poem by Patrick Prunty
 
 --- 
 

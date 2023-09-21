@@ -1,5 +1,5 @@
 ---
-title: Shared weekly (week 1)
+title: 📅 Shared weekly (week 1)
 author: Patrick Prunty
 date: 2023-09-08
 template: article.pug
