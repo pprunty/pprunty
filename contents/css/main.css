@@ -508,12 +508,34 @@ nav ul {
   margin: auto;
 }
 
+
+/*@media (max-width: 500px) {*/
+/*  nav {*/
+/*    margin-left: 0px;*/
+/*    margin-right: 0px;*/
+/*  }*/
+/*}*/
+
 @media (min-width: 769px) {
   nav {
     margin-left: 175px;
     margin-right: 175px;
   }
 }
+
+/*@media (min-width: 1600px) {*/
+/*  nav {*/
+/*    margin-left: 240px;*/
+/*    margin-right: 240px;*/
+/*  }*/
+/*}*/
+
+/*@media (min-width: 1600px) {*/
+/*  nav {*/
+/*    margin-left: 240px;*/
+/*    margin-right: 240px;*/
+/*  }*/
+/*}*/
 
 nav ul li {
   flex-direction: row;
@@ -541,11 +563,89 @@ nav ul a.active {
   justify-content: center;
 }
 
+.photo-grid-item {
+  position: relative;
+  cursor: pointer;
+  /*z-index: 5;*/
+}
+
 .photo-grid-item img {
   width: 280px;
   height: 380px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.photo-grid-item::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F8F8F8;
+  z-index: 2;
+  animation: colorTransition 1.3s ease-in-out infinite;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.photo-grid-item.loaded::before {
+  opacity: 0;
+}
+
+
+@keyframes imageScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes imageVibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.zoom-icon-container {
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  right: 10px;
+  z-index: 10; /* Make sure the icon stays on top of the image */
+}
+
+.zoom-icon {
+  width: 28px;
+  stroke: #ffffff; /* Active color */
+  fill: none;   /* Active fill */
+  height: 28px;
+}
+
+.w-4, .h-4 {
+  width: 28px;
+  height: 28px;
 }
 
 .photo-grid-item .description {
@@ -571,8 +671,8 @@ img.loading {
   display: none;
   position: fixed;
   bottom: 15px;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   z-index: 99;
   border: none;
   outline: none;
@@ -592,13 +692,20 @@ img.loading {
 
 @media (min-width: 769px) {
   #scrollToTop {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     right: 60px;
     bottom: 25px;
   }
 }
 
+
+/*@media (min-width: 1600px) {*/
+/*  #scrollToTop {*/
+/*    width: 60px;*/
+/*    height: 60px;*/
+/*  }*/
+/*}*/
 
 @media (max-width: 769px) {
   #scrollToTop {
@@ -734,5 +841,318 @@ img.loading {
 @media (min-width: 769px) {
   .article-image-title {
     font-size: 18px;
+  }
+}
+
+.subscribe {
+  text-align: center;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+}
+
+.subscribe-title {
+  font-weight: 550;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.subscribe-subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-input,
+.subscribe-button {
+  height: 44px;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.subscribe-input {
+  border: 1px solid #FF563A;
+  width: 300px;
+  border-top-left-radius: 5px;
+  font-size: 16px;
+  border-bottom-left-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  -webkit-border-bottom-right-radius: 0px !important;
+  -webkit-border-top-right-radius: 0px !important;
+  -moz-border-radius-bottomright: 0px !important;
+  -moz-border-radius-topright: 0px !important;
+}
+
+.subscribe-button {
+  margin-left: 0 !important;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100px;
+  /*text-align: center;  !* Horizontal center *!*/
+  /*vertical-align: middle;  !* Vertical center *!*/
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FF563A;
+  border: none;
+  font-weight: 600;
+  color: white;
+}
+
+.message-container {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #FF563A;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #FF0000;
+  margin-top: 10px;
+}
+
+.subscribe-button {
+  /* Existing Styles */
+  display: flex;  /* Add flexbox layout */
+  justify-content: center;  /* Horizontal center */
+  align-items: center;  /* Vertical center */
+  position: relative;  /* Added for potential absolute positioning of child elements */
+}
+
+.subscribe-button:disabled {
+  cursor: not-allowed;
+}
+
+.button-text {
+  text-align: center;  /* Horizontal center */
+  align-self: center;  /* Vertical center */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Centered image */
+/*.centered-image {*/
+/*  position: absolute;*/
+/*  cursor: pointer;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%, -50%);*/
+/*  max-width: 90%;*/
+/*  max-height: 90%;*/
+/*}*/
+
+@media (min-width: 769px) {
+  .article-image-title {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}
+
+.image-instruction {
+  color: white;
+  font-family: Monospaced, monospace;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: 10px;
+  /* Other styles as you see fit */
+}
+
+@media (max-width: 769px) {
+  .image-instruction {
+    margin-top: 40px;
+    font-size: 11px;
+  }
+}
+
+
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.close-button {
+  position: fixed;
+  bottom: 25px;
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Gadget, sans-serif;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 100%;
+  color: white;
+  opacity: 80%;
+  background-color: #635650;
+  z-index: 100000;
+  font-weight: 500;
+  right: 250px;
+  top: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+@media (min-width: 1600px) {
+  .close-button {
+    height: 60px;
+    width: 60px;
+    right: 350px;
+    font-size: 22;
+  }
+}
+
+
+.close-button:hover {
+  background-color: #3f3633;
+}
+
+@media (max-width: 1150px) {
+  .close-button {
+    right: 10px;
+  }
+}
+
+
+.centered-image {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 999; // Ensure that the image is below the close button
+}
+
+.center-overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  animation: moveUpDown 1.5s ease-in-out;  /* 3s duration, infinite loop */
+  /* Add any additional styling you need */
+}
+
+@keyframes moveUpDown {
+  0%   { transform: translate(-50%, -50%); }
+  33%  { transform: translate(-50%, calc(-50% - 10px)); }
+  66%  { transform: translate(-50%, calc(-50% + 20px)); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+.nav-tabs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.nav-tab {
+  margin-bottom: 0 !important;
+  /*float: left;*/
+  /*transition: all 0.3s ease;*/
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  /*color: rgb(166, 166, 166);*/
+  /*display: inline-block;*/
+  /*padding: 14px 16px 10px;*/
+  /*border-radius: 4px 4px 0 0;*/
+  /*text-align: center;*/
+  /*text-decoration: none;*/
+  /*color: #343a40;*/
+  /*border: 0.5px solid #949292;*/
+  /*margin-top: 10px;  !* Default margin-top *!*/
+  /*transition: margin-top 3s ease-in-out;  !* Animate margin-top *!*/
+}
+
+.nav-tab:hover {
+  /* You can add hover effects here */
+}
+
+
+.nav-item.active {
+  color: #ff8000 !important;
+}
+
+.w-6, .h-6 {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-icon {
+  stroke: rgb(128, 128, 128); /* Default color */
+  fill: none;  /* Default fill */
+}
+
+.nav-icon:hover {
+  color: #ff8000; /* Default color */
+  fill: none;  /* Default fill */
+}
+
+.active-icon {
+  stroke: #ff8000; /* Active color */
+  fill: none;   /* Active fill */
+}
+
+.nav-icon {
+  width: 1.7em;
+  height: 1.7em;
+}
+
+
+@media (min-width: 1600px) {
+  .w-6, .h-6 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+@keyframes colorTransition {
+  0% {
+    background-color: #F8F8F8; /* Initial color */
+  }
+  50% {
+    background-color: #E6E6E6; /* Color to transition to */
+  }
+  100% {
+    background-color: #F8F8F8; /* Back to initial color */
   }
 }

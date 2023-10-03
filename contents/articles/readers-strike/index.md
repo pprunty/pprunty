@@ -6,9 +6,15 @@ template: article.pug
 ---
 
 Exploring how readers can leverage large language models (LLMs) to create fan-fiction for long awaited titles such as George
-R.R Martin's _The Winds of Winter_ (forthcoming sixth novel in the series _A Song of Ice and Fire_ / _Game of Thrones_ )
+R.R Martin's _The Winds of Winter_ (forthcoming sixth novel in the series _A Song of Ice and Fire_ / _Game of Thrones_ ).
 
 ---
+
+<div class="article-image-container">
+  <div class="article-image">
+    <img src="https://pprunty.github.io/pprunty/assets/images/articles/readers-strike/protestors.png" alt="rapper">
+  </div>
+</div>
 
 <div class="drop-cap">T</div><p>rophere was no hope for him this time: it was the third stroke. Night after night I had passed the house (it was vacation time) and studied the lighted square of window: and night after night I had found it lighted in the same way, faintly and evenly. If he was dead, I thought, I would see the reflection of candles on the darkened blind for I knew that two candles must be set at the head of a corpse. He had often said to me: “I am not long for this world,” and I had thought his words idle. Now I knew they were true. Every night as I gazed up at the window I said softly to myself the word paralysis. It had always sounded strangely in my ears, like the word gnomon in the Euclid and the word simony in the Catechism.</p>
 

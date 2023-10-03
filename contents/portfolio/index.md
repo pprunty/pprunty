@@ -3,7 +3,7 @@ title: Contact
 template: basic.pug
 ---
 
---- 
+---
 
 My name is  <span style="color:#FF612B">Patrick Prunty</span> and I’m a Fullstack Software Engineer
 at Optum Healthcare. Previously, I studied MSc. in High-Performance Computing at Trinity College
@@ -20,11 +20,11 @@ ranging from science and technology to creative prose.
 ## 🖥️ Software Projects:
 
 
-* <a href="https://github.com/pprunty/shapeshifter" target="_blank" rel="noopener noreferrer">```shapeshifter```</a> is an open-source tool
-for creating dynamic, multipage user interfaces interactively through the user interface itself. Inspired by vi/vim, 
-it allows real-time manipulation of web components on your local server via shapeshifter 'edit mode'. The platform offers
-a library of templates to build your project from, and modular components which can be plugged in to your project, for 
-quick, standardized and interactive development.
+* <a href="https://github.com/pprunty/shapeshifter" target="_blank" rel="noopener noreferrer">```shapeshifter```</a> is 
+an open-source platform designed to facilitate the interactive creation of dynamic, multi-page user interfaces directly
+within the software developer's UI environment. Inspired by vi/vim, it enables real-time adjustments to web components on your local server
+via shapeshifter's 'edit mode'. The platform offers a library of templates to build your project from, and modular 
+components which can be plugged in to your project, for quick, standardized and interactive development.
 
 🔜 Version 0.1.0 video demo is coming soon. In the meantime enjoy this cool video instead: 
 
@@ -43,40 +43,26 @@ quick, standardized and interactive development.
 
 [//]: # (GitHub or email for collaboration opportunities.)
 
-[//]: # ()
-[//]: # (* <a href="https://www.tcd.ie" target="_blank" rel="noopener noreferrer">```Shared```</a> -  Unleash the Power of )
 
-[//]: # (Curiosity with Shared, the ultimate cross-platform mobile app for iOS and Android. Ever wondered what movies your)
+* <a href="https://www.tcd.ie" target="_blank" rel="noopener noreferrer">```Shared```</a> -  Unleash the Power of
+Curiosity with Shared, the ultimate cross-platform mobile app for iOS and Android. Have you ever wondered what movies 
+have captivated your friends lately, or which playlists are their current go-to? Shared effortlessly integrates your 
+cross-platform media consumption, from Netflix binges to Spotify listening sprees, and compiles your favorites into a 
+weekly digest that's distributed to your followers. Dive into
+a world shaped by the preferences of people you care about and find your next obsession. It's not just social
+networking; it's a journey through the collective interests of your community. Don't miss out — join Shared and start
+discovering today! 🔜
 
-[//]: # (friends are binging or which playlists keep them going? Shared bridges the gap between your Netflix nights and )
+<div class="app-store-badge-container">
+  <a href='https://play.google.com/store/apps/details?id=com.imangi.templerun&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="app-store-badge google-play-badge">
+    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+  </a>
+  <a href="https://apps.apple.com/us/app/temple-run/id420009108?itsct=apps_box_badge&amp;itscg=30200" class="app-store-badge apple-store-badge">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1312416000" alt="Download on the App Store">
+  </a>
+</div>
 
-[//]: # (Spotify vibes, aggregating your favorite content into a weekly report that gets showcased to your followers. Dive into)
-
-[//]: # (a world shaped by the preferences of people you care about and find your next obsession. It's not just social )
-
-[//]: # (networking; it's a journey through the collective interests of your community. Don't miss out — join Shared and start )
-
-[//]: # (discovering today! 🔜)
-
-[//]: # ()
-[//]: # (<div class="app-store-badge-container">)
-
-[//]: # (  <a href='https://play.google.com/store/apps/details?id=com.imangi.templerun&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="app-store-badge google-play-badge">)
-
-[//]: # (    <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>)
-
-[//]: # (  </a>)
-
-[//]: # (  <a href="https://apps.apple.com/us/app/temple-run/id420009108?itsct=apps_box_badge&amp;itscg=30200" class="app-store-badge apple-store-badge">)
-
-[//]: # (    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1312416000" alt="Download on the App Store">)
-
-[//]: # (  </a>)
-
-[//]: # (</div>)
-
-[//]: # ()
-[//]: # (---)
+---
 
 
 ## 🎓 Schools I’ve attended:

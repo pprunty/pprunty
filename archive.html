@@ -27,7 +27,6 @@
         </nav>
       </div>
     </header>
-    <!--script(src=contents.js['script.js'].url)-->
   </body>
   <div id="content">
     <div class="content-wrap">
@@ -68,7 +67,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         var currentPath = window.location.pathname;
         var navItems = document.querySelectorAll('#navList li a');
-    
+
         navItems.forEach(function (item) {
             if (item.getAttribute('href') === currentPath) {
                 item.parentElement.classList.add('active');
@@ -82,12 +81,12 @@
     function scrollToTopFunction() {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
-    
+
     // Show button when scrolling down
     window.addEventListener('scroll', function () {
         var scrollPosition = window.scrollY;
         var btn = document.getElementById('scrollToTop');
-    
+
         if (scrollPosition > 350) {  // Adjust this value based on when you want to show the button
             btn.style.display = 'block';
         } else {

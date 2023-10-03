@@ -6,9 +6,15 @@ template: article.pug
 ---
 
 A novel approach to user content recommendation systems which opens a two-way communication channel (web-socket) between the user and
-recommendation algorithm, via a content filter configuration system on the frontend
+recommendation algorithm, via a content filter configuration system on the frontend.
 
 ---
+
+<div class="article-image-container">
+  <div class="article-image">
+    <img src="https://pprunty.github.io/pprunty/assets/images/articles/algorithm-for-the-people/user.png" alt="rapper">
+  </div>
+</div>
 
 <div class="drop-cap">W</div><p>hen you consider the mobile and web applications you use today, nearly all of them use
 recommendation systems as a vehicle to enhance user engagement.

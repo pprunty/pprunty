@@ -18,4 +18,4 @@ A list of consumed content which I would like to share with you this week...
 7. <a href="https://www.youtube.com/watch?v=Oe8lU18G89Q" target="_blank" rel="noopener noreferrer">Subliminal Official GAMEPLAY Trailer (Part 1) - Video/Youtube</a>
 8. <a href="https://www.youtube.com/watch?v=MZCltCw1qqE" target="_blank" rel="noopener noreferrer">Blackfyre Rebellions: House Targaryen’s greatest enemies - Video/Youtube</a>
 
-Subscribe to my <a href="https://patrickprunty.substack.com?utm_source=navbar&utm_medium=web&r=1mwzzd " target="_blank" rel="noopener noreferrer">sub-stack newsletter</a> to get email notifications when I release my shared weekly 🙂
+Subscribe to my newsletter below to receive email notifications when I release my shared weekly and other articles 🙂
