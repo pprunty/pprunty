@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>👾 Developing a Foundational Template for Full-Stack Web Applications - patrick prunty
+    </title>
+    <link rel="alternate" href="https://pprunty.github.io/pprunty/feed.xml" type="application/rss+xml" title="Ramblings of an immor(t)al demigod">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="https://pprunty.github.io/pprunty/css/main.css">
+    <link rel="icon" href="https://pprunty.github.io/pprunty/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Basic Meta Tags-->
+    <meta name="description" content="Software projects, blog posts and photography.">
+    <meta name="author" content="Patrick Prunty">
+    <meta name="keywords" content="Patrick Prunty, Portfolio, Software Developer, Python, C++, Data Engineering, AI, Machine Learning, iOS, Creative Writing, Photography">
+    <!-- Open Graph Meta Tags-->
+    <meta property="og:title" content="Patrick Prunty's Portfolio">
+    <meta property="og:description" content="Software projects, blog posts and photography.">
+    <meta property="og:image" content="https://pprunty.github.io/pprunty/assets/images/thumbnail.JPG">
+    <meta property="og:url" content="https://pprunty.github.io/pprunty">
+    <!-- Twitter Card Meta Tags-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Patrick Prunty's Portfolio">
+    <meta name="twitter:description" content="Software projects, blog posts and photography.">
+    <meta name="twitter:image" content="https://pprunty.github.io/pprunty/assets/images/thumbnail.JPG">
+    <!-- Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08HZ6HBLML"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08HZ6HBLM');
+      
+      each
+          imgSrc in ['0933d840-61b9-416a-a9d1-4c0d94e6de31.JPG',
+          'scrollIndicator.png',
+          '0a94d7f5-834a-4567-86db-93f1ce8dc3ca.JPG',
+          '18cf58c6-db66-427a-9098-fe9ad195011d.JPG',
+          '228e8572-309a-4902-95e5-c1b873a0da6a.JPG',
+          '232afccf-fb3e-443d-af60-c1c67a6189d0.JPG',
+          '2aaeb586-ccfd-4456-a599-43bf55750257.JPG',
+          '2add6d50-7a3e-4142-9707-b3d7d0e8ed7e.JPG',
+          '2d8324a2-e783-47d8-aa1c-3891e7a8b541.JPG',
+          '302ba015-317b-457e-86e4-6177a16327a3.JPG',
+          '3c572e76-1906-4454-84e0-7369039ec401.JPG',
+          '3cf5f5a9-843c-44e2-9482-45c765a84d30.JPG',
+          '405c8f8c-f5e2-4c5b-9169-d73d64c498fc.JPG',
+          '4f0761c5-0058-4adc-9b42-5cd97785dde4.JPG',
+          '5013cd79-eab7-4e60-9676-909e09afde54.JPG',
+          '60a53698-deec-4b91-94a8-5513e534c24a.JPG',
+          '6bd222bb-e56c-4ed6-a402-a653a72d972d.JPG',
+          '7e91693b-ef05-438d-923c-9c642d8283fc.JPG',
+          '81aaf960-a324-430c-90d1-b752fb6d58bd.JPG',
+          '8d5f9eb8-9088-46c1-81e6-7a50923207f6.JPG',
+          '8dc81083-7a91-4096-ad91-79f8528f8125.JPG',
+          '8ea4d597-b6a9-46da-bc2b-c9d935fd73dc.JPG',
+          '9492d555-5520-4afb-8669-7c26d4a58133.JPG',
+          '954b63bd-6d61-447c-9d8a-99d00a303c77.JPG',
+          '974cd93c-b89d-4947-b1b4-dbe3fe888110.JPG',
+          '9977ee3f-d4bd-4ce6-a57c-04397898b222.JPG',
+          '9b08eb13-85ae-4ef2-8722-c78ce0234567.JPG',
+          '9fe51fdc-666f-471e-a0aa-12fb27d8d5eb.JPG',
+          'a40ef176-2a99-45e5-82a4-f4cd15cf9822.JPG',
+          'a8b62ad2-008f-4084-af78-e5f5babfd5ea.JPG',
+          'af1874ac-3277-435d-83dd-5ba41fb4b7af.JPG',
+          'b02cbd77-15df-452b-a458-c7ce3d0611e7.JPG',
+          'bf964f29-9a5b-4f2a-baa3-d9c54003c6f2.JPG',
+          'bfce978c-f6e5-4004-845f-9dbb9088c0d3.JPG',
+          'bffc4d2b-1dda-4af9-a624-ab9ad21a86d4.JPG',
+          'c0009a47-324c-4543-b5ab-e6074f911f84.JPG',
+          'c34f6ab4-56ac-444c-b95a-dec60e5cf007.JPG',
+          'c57ad8ca-ee1e-4d3d-a9f6-9b0222e211da.JPG',
+          'f066743c-1d55-408a-a3f8-85b8e7e6f464.JPG',
+          'f313c365-0bc2-48f9-b391-b8801048f256.JPG',
+          'f374a34d-3bd7-48a9-ac5f-e43a3221482a.JPG']
+            link(rel = 'preload', as = 'image', href = locals.url + '/assets/images/' + imgSrc)
+    </script>
+    <body>
+      <div class="content-wrap">
+        <div class="nav-back"><a href="https://pprunty.github.io/pprunty/">&laquo; Full blog</a></div>
+        <h1 class="article-title">👾 Developing a Foundational Template for Full-Stack Web Applications</h1>
+        <p class="author">Written by <span class="author">Patrick Prunty</span>
+          <div class="image-container-small"><img src="https://pprunty.github.io/pprunty/assets/images/logo.JPG"></div>
+        </p>
+      </div>
+      <div id="overlay">
+        <div id="overlayMenu">
+          <ul class="overlay-nav-tabs">
+            <li><a href="https://pprunty.github.io/pprunty/">Blog</a></li>
+            <li><a href="https://pprunty.github.io/pprunty/portfolio/">Portfolio</a></li>
+            <li><a href="https://pprunty.github.io/pprunty/photography/">Photography</a></li>
+            <li><a href="https://pprunty.github.io/pprunty/contact/">Contact</a></li>
+            <!-- Add more overlay menu items here-->
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <div class="content-wrap">
+          <article class="article">
+            <section class="content"><p>Detailing my journey building a foundational, springboard template for full-stack web applications using FastAPI, React, MongoDB and<span class="widont">&nbsp;</span><span class="caps">AWS</span>.</p>
+<hr>
+<p><ins><span class="caps">NOTE</span>: Article is coming soon once the site is fully developed (nearly there<span class="widont">&nbsp;</span>😎)</ins></p>
+<div class="drop-cap">L</div><p>orem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit neque. Donec porttitor commodo luctus. Nunc sed purus nec nisi viverra vestibulum in non urna. Nullam nec lectus sapien. Aenean vestibulum mauris justo, eget semper quam condimentum sit amet. Donec facilisis nulla quis cursus congue. Sed sodales nunc lacus, nec facilisis risus gravida<span class="widont">&nbsp;</span>vel.</p>
+
+<p>Mauris viverra feugiat egestas. Aenean mauris nibh, blandit sit amet leo sagittis, tincidunt fringilla orci. Cras hendrerit dolor in efficitur placerat. Quisque suscipit sit amet quam congue pretium. Cras dapibus congue erat, sed malesuada velit vestibulum ut. Suspendisse gravida tincidunt sollicitudin. Vestibulum ac odio tempus, auctor sem non, interdum dolor. Aenean ultrices ex ac magna dapibus tempus. Proin a tristique urna. In in cursus est, eu porta eros.
+Aliquam iaculis urna augue, dictum efficitur magna rhoncus quis. Pellentesque rutrum sodales mattis. Nam rutrum, lacus a pellentesque euismod, justo felis imperdiet velit, ut dignissim mauris lacus eu libero. Aliquam vel rutrum tortor. Phasellus sit amet libero ac neque cursus vehicula. Suspendisse tincidunt dui nisi, in dignissim leo tincidunt tincidunt. Nunc feugiat, erat et euismod aliquet, mi libero malesuada ligula, ut imperdiet felis velit nec lacus. Curabitur ex eros, posuere vel tellus vel, auctor suscipit<span class="widont">&nbsp;</span>odio.</p>
+<div class="article-image-container">
+  <div class="article-image">
+    <img src="https://pprunty.github.io/pprunty/assets/images/articles/ode-to-pokemon/pokemon2.png" alt="pokemon2">
+  </div>
+  <div class="article-image-title">Pokemon something</div>
+</div>
+
+<p>Morbi a convallis odio. Morbi efficitur tortor eget diam varius, eget placerat tellus suscipit. Sed porttitor metus non lectus varius, id tristique velit aliquam. Mauris ex sapien, convallis id dignissim non, mollis quis sem. Aenean ac mi ornare, auctor urna in, mattis nulla. Sed gravida, dolor non viverra dapibus, sem turpis eleifend ipsum, quis fringilla enim est sed risus. Vivamus in enim pharetra, vulputate mauris ut, blandit turpis. Phasellus venenatis ut elit eu consectetur. Sed blandit risus vel massa fringilla, sed tempor mi maximus. Integer massa augue, malesuada quis euismod id, semper sit amet<span class="widont">&nbsp;</span>magna.</p>
+</section>
+          </article>
+          <!-- This is where you might define a content block to be overridden in other files-->
+        </div>
+      </div>
+      <button id="scrollToTop" title="Go to top" onclick="scrollToTopFunction()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" width="32" height="32">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-width="1.5"></path>
+        </svg>
+      </button>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById("hamburger");
+            const navTabs = document.querySelector('.nav-tabs');
+            const overlay = document.getElementById("overlay");
+            const overlayMenu = document.getElementById("overlayMenu");  // New overlay menu
+            const body = document.body;
+            let originalNavTabsDisplay = navTabs.style.display;  // Save the original display style
+        
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+        
+                // Toggle overlay
+                if (overlay.classList.contains("show")) {
+                    overlay.classList.remove("show");
+                    overlayMenu.style.display = 'none';  // Hide overlay menu
+                    navTabs.style.display = originalNavTabsDisplay;  // Restore original nav items
+                    body.style.overflow = 'auto';
+                } else {
+                    overlay.classList.add("show");
+                    overlayMenu.style.display = 'block';  // Show overlay menu
+                    originalNavTabsDisplay = navTabs.style.display;  // Save the current display style
+                    navTabs.style.display = 'none';  // Hide original nav items
+                    body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+      </script>
+    </body>
+    <!-- document.addEventListener("DOMContentLoaded", () => {-->
+    <!--     const hamburger = document.getElementById("hamburger");-->
+    <!--     const navTabs = document.querySelector('.nav-tabs');-->
+    <!---->
+    <!--     hamburger.addEventListener("click", () => {-->
+    <!--         hamburger.classList.toggle("active");-->
+    <!--         navTabs.classList.toggle("active");  // Add or remove the 'active' class-->
+    <!--         navTabs.style.display = navTabs.style.display === 'block' ? 'none' : 'block';-->
+    <!--     });-->
+    <!-- });-->
+  </head>
+  <script>
+    // Function to scroll to top
+    function scrollToTopFunction() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    
+    // Show button when scrolling down
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY;
+        var btn = document.getElementById('scrollToTop');
+    
+        if (scrollPosition > 350) {  // Adjust this value based on when you want to show the button
+            btn.style.display = 'block';
+        } else {
+            btn.style.display = 'none';
+        }
+    });
+  </script>
+  <script>
+    // Function to set active nav link based on current URL
+    function setActiveNavLink() {
+        const currentURL = window.location.href;
+        const navItems = document.querySelectorAll('.nav-item');
+    
+        navItems.forEach((item) => {
+            const itemHref = item.getAttribute('href');
+            const svgIcon = item.querySelector('.nav-icon');
+    
+            if (currentURL === itemHref || (currentURL + '/' === itemHref)) {
+                item.classList.add('active');
+                if (svgIcon) {
+                    svgIcon.classList.add('active-icon');
+                }
+            } else {
+                item.classList.remove('active');
+                if (svgIcon) {
+                    svgIcon.classList.remove('active-icon');
+                }
+            }
+        });
+    }
+    
+    // Function to set active overlay nav link based on current URL
+    function setActiveOverlayNavLink() {
+        const currentURL = window.location.href;
+        const overlayNavItems = document.querySelectorAll('.overlay-nav-tabs li a');
+    
+        overlayNavItems.forEach((item) => {
+            const itemHref = item.getAttribute('href');
+    
+            if (currentURL === itemHref || (currentURL + '/' === itemHref)) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+    
+    // Call the function to set the active overlay nav link
+    setActiveOverlayNavLink();
+    
+    // Call the function to set the active nav link
+    setActiveNavLink();
+  </script>
+  <footer>
+    <div class="content-wrap">
+      <div class="nav"><a href="https://pprunty.github.io/pprunty/">&laquo; Full blog</a></div>
+      <hr>
+      <section class="copy">
+        <div class="subscribe">
+          <div class="subscribe-title">Patrick Prunty's Newsletter</div>
+          <div class="subscribe-subtitle">Stay updated with my latest articles!</div>
+          <form id="subscribe-form">
+            <div class="subscribe-container">
+              <input class="subscribe-input" type="email" placeholder="Type your email..." id="user-email">
+              <button class="subscribe-button" type="submit">
+                <div class="button-text">Subscribe</div>
+              </button>
+            </div>
+          </form>
+          <div class="message-container">
+            <div id="loading-indicator"></div>
+          </div>
+          <div class="message-container"></div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+            
+                // Disable the submit button
+                const submitButton = document.querySelector('.subscribe-button');
+                submitButton.disabled = true;
+            
+                var email = document.getElementById("user-email").value;
+                // Check if the email is empty
+                if (email.trim() === "") {
+                  var messageContainer = document.querySelector(".message-container");
+                  var errorMessage = document.createElement("div");
+                  errorMessage.textContent = "Email cannot be empty.";
+                  errorMessage.className = "error-message";
+                  messageContainer.appendChild(errorMessage);
+                  return;  // Return to exit the function and prevent further form submission
+                }
+            
+                // Display loading indicator
+                const loadingIndicator = document.getElementById("loading-indicator");
+                loadingIndicator.textContent = "Loading...";
+            
+                fetch("https://corsproxy.io/?https://eu-central-1.aws.data.mongodb-api.com/app/data-dfmdz/endpoint/data/v1/action/insertOne", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Request-Headers": "*",
+                    "api-key": "LBy4HfRJpYUEOgRfDTlGpHcz63ap3dl6lKOcDCP6bUQRYdwc1vkQw1r3d0nf1GQa"
+                  },
+                  body: JSON.stringify({
+                    collection: "emails",
+                    database: "newsletter",
+                    dataSource: "Cluster0",
+                    document: {
+                      email: email,
+                      timestamp: (new Date()).toISOString() // includes both date and time
+                    }
+                  })
+                })
+                .then(response => response.json())
+                .then(data => {
+                  // Remove loading indicator
+                  loadingIndicator.textContent = "";
+                  var messageContainer = document.querySelector(".message-container");
+            
+                  // Clear previous messages
+                  messageContainer.innerHTML = '';
+            
+                  if (data.insertedId) { // Success condition
+                    var successMessage = document.createElement("div");
+                    successMessage.textContent = "Thank you for subscribing!";
+                    successMessage.className = "success-message";
+                    messageContainer.appendChild(successMessage);
+                  } else { // Failure condition
+                    var errorMessage = document.createElement("div");
+                    errorMessage.textContent = "Something went wrong. Please try again.";
+                    errorMessage.className = "error-message";
+                    messageContainer.appendChild(errorMessage);
+                  }
+                  submitButton.disabled = false;
+                })
+                .catch(error => {
+                  // Remove loading indicator
+                  loadingIndicator.textContent = "";
+            
+                  console.error("There was an error:", error);
+            
+                  var errorMessage = document.createElement("div");
+                  errorMessage.textContent = "Something went wrong. Please try again.";
+                  errorMessage.className = "error-message";
+            
+                  var messageContainer = document.querySelector(".message-container");
+                  messageContainer.appendChild(errorMessage);
+                  submitButton.disabled = false;
+                });
+              });
+            });
+          </script>
+          <p class="footer-note">&copy; 2024 &mdash; Developed by Patrick Prunty</p>
+        </div>
+      </section>
+    </div>
+  </footer>
+</html>
